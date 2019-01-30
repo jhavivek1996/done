@@ -1,0 +1,17 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logout</title>
+</head>
+<body>
+	<h1> You have been Logged Out</h1>
+	{% block content %}
+		<div class="border-top pt-3">
+			<strong>
+		Log-in <a class="ml-2" href="{% url 'login' %}">Sign-In</a></strong>
+	</div>
+		</div>
+		{% endblock content %}
+</body>
+</html>

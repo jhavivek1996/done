@@ -1,0 +1,94 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+  Agile Practice for E-Library
+</title><link rel="stylesheet" href="css/reset.css" /><link rel="stylesheet prefetch" href="css/f.css" /><link rel="stylesheet prefetch" href="css/aw.css" /><link rel="stylesheet" href="css/style.css" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+   
+  
+</head>
+<body class="container" class="jumbotron">
+    <form name="frm" method="post" action="./" id="frm">
+        {% csrf_token %}
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwNDU2NzEyMDkPZBYCAgMPZBYIAgUPZBYCAgEPEGRkFgFmZAILDzwrABECARAWABYAFgAMFCsAAGQCDQ88KwARAgEQFgAWABYADBQrAABkAhEPPCsAEQIBEBYAFgAWAAwUKwAAZBgDBQlHcmlkVmlldzEPZ2QFCEdyZG11bHRpD2dkBQpSZXBEZXRhaWxzD2dk5aZ5tEn76cLdV7PS3QzlUdTcm6cSr5nQlq8bKwV3CYw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frm'];
+if (!theForm) {
+    theForm = document.frm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+  <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+  <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAaIWfqqute98FLFC7lui9I4dmoizCMJXKwtN1d8sFm1auC8h1+JRvxzT5+0NgOHjmpn+9NLpv+APTcbNZ50FteO4wAmGEhervZh2g+8xp73GBmGWNm30vQ9zyXkVZ1G8lhzs0kOZPAxhm0iYyU5yAHXm+lKMhRYzYavjOKEgnlXSg==" />
+</div>
+    <div class="pen-title" style="padding: 28px 0;">
+        <h1>
+            <img src="{% static '/img/download.png' %}" height="78px" style="vertical-align: middle;" />
+            <span style="vertical-align: middle; font-size: 44px; color: Navy; font-weight: bold;">&nbsp;&nbsp;
+                AGILE PRACTICE FOR E-LIBRARY</span><hr />
+            It is mainly developed for general public which has the curosity of reading
+        </h1>
+      
+        
+        
+    </div>
+    <div id="mainLogin" class="module form-module">
+        <div class="t">
+        </div>
+        <div class="form">
+            <center>
+                <h2>
+                    Select Login Type :</h2>
+                    <form>
+                    <select name="list" id="list" accesskey="target">
+                        <option value='none' selected>Select</option>
+                        <option> <a href="{% url 'sellerregister' %}">Seller</a></option>
+                        <option> <a href="{% url 'libraryregister' %}">Library</a></option>
+                        <option> <a href="{% url 'userregister' %}">User</a></option>
+                    </select>
+                    <input type="submit" value="submit" onclick="goToNewPage()" class="btn btn-info" />
+</form>
+        </div>
+    </div>
+    
+    
+    <hr />
+    <div align="center">
+  
+        <li>For any query mail us at <b>eagilelibrary@gmail.com</b></li>
+       
+
+    </div>
+    <div>
+               
+                            
+                             
+                       
+                    
+    </div>
+    </form>
+    <script src="js/jqu.js" type="text/javascript"></script>
+    
+    <script src="js/index.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<title>Login Page</title>
+</head>
+<body>
+	<div class="content-section" class="container-fluid">
+	{% block content %}
+	<form method="POST">
+		{% csrf_token %}
+		<fieldset class="form-group-fluid">
+
+			<legend class="border-bottom mb-4">Login Here</legend>
+			{{ form | crispy }}
+		</fieldset>
+		<div class="form-group"></div>
+	<input type="submit" value="Login" class="btn-btn success">
+
+	</form>
+
+	<div class="inline-group">
+	<a class="loginBtn loginBtn--google" href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a>
+	<a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+
+
+	</div>
+	<div class="border-top pt-3"> 
+	{% endblock content %}
+	
+
+
+</div>
+
+
+</body>
+
+</html>
